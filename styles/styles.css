@@ -36,7 +36,7 @@ header {
 
 .block {
     background-color: var(--secondary-color);
-    height: 500px;
+    height: 650px;
     padding-top: 20px;
 }
 
@@ -50,6 +50,13 @@ header {
     animation: glitch 2s infinite;
     text-transform: uppercase;
     letter-spacing: 3px;
+}
+
+.logo_img {
+    margin: 0;
+    color: var(--text-color1);
+    height: auto;
+    width: 200px;
 }
 
 .sub_text {
@@ -144,8 +151,7 @@ header {
     margin: 0;
 }
 
-.footer {
-    padding: 2rem;
+footer {
     background: var(--secondary-color);
     color: var(--text-2);
     font-weight: 400;
@@ -153,7 +159,9 @@ header {
     justify-content: center;
     align-items: center;
     gap: 0.2rem;
+    height: 100px;
   }
+  
 
 @keyframes glitch {
     0%, 100% {
@@ -210,4 +218,9 @@ header {
         margin-top: 20px;
     }
 
+    .logo_img {
+        margin-top: 30px;
+        position: relative;
+        width: 150px;
+    }
 }
