@@ -108,6 +108,15 @@ header {
     border-radius: 5px 0 0 5px;
 }
 
+.about_title {
+    color: var(--text-color1);
+    font-family: "Share Tech Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1em;
+    margin: 0;
+}
+
 .about_content {
     display: flex;
     flex-direction: column;
@@ -192,6 +201,13 @@ header {
         font-size: 0.9em;
     }
 
+    .about_content p {
+        font-size: 0.8em;
+    }
     
+    .about_title {
+        font-size: 0.8em;
+        margin-top: 20px;
+    }
 
 }
