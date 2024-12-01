@@ -1,0 +1,263 @@
+:root {
+    --background-color: #000000;
+    --text-color: #FFFFFF;
+    --text-color2: #9f9f9f;
+    --accent-color: #F5347F;
+    --accent-color-dark: #C02A65;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: 'Inter', 'Arial', sans-serif;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+/* Паралакс секции */
+.parallax-section {
+    position: relative;
+    height: 100svh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* Навигация */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(0,0,0,0.9);
+    backdrop-filter: blur(15px);
+    z-index: 1000;
+}
+
+.navbar-brand {
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+/* Секции */
+.skills-section,
+.portfolio-section,
+#about {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    padding: 80px 0;
+}
+
+/* Герой секция */
+.hero {
+    background-color: var(--background-color);
+    position: relative;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    padding: 0 15px;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    font-weight: 900;
+}
+
+/* Унифицированные карточки */
+.card {
+    background-color: rgba(20,20,20,0.8);
+    border: 1px solid rgba(245,52,127,0.2);
+    border-radius: 10px;
+    transition: all 0.4s ease;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(245,52,127,0.3);
+}
+
+.card-body {
+    text-align: center;
+    padding: 25px;
+}
+
+.card-body i {
+    color: var(--accent-color);
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.card-title {
+    color: var(--text-color);
+    margin-bottom: 15px;
+}
+
+.card-body p {
+    color: var(--text-color2);
+}
+
+/* Секция "О себе" */
+#about .skills-container .skill-card {
+    background-color: rgba(20,20,20,0.8);
+    border: 1px solid rgba(245,52,127,0.2);
+    color: var(--text-color);
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    transition: all 0.4s ease;
+}
+
+#about .skills-container .skill-card i {
+    margin-right: 10px;
+    color: var(--accent-color);
+    font-size: 1.5rem;
+}
+
+#about .skills-container .skill-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(245,52,127,0.3);
+}
+
+/* Портфолио */
+.portfolio-section {
+    background-color: var(--background-color);
+}
+
+.portfolio-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    margin-bottom: 30px;
+}
+
+.portfolio-item img {
+    transition: transform 0.5s ease;
+    width: 100%;
+}
+
+.portfolio-item:hover img {
+    transform: scale(1.1);
+}
+
+.portfolio-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent 60%, var(--accent-color-dark));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.portfolio-item:hover .portfolio-overlay {
+    opacity: 0.8;
+}
+
+/* Заголовки секций */
+h2 {
+    color: var(--text-color);
+    text-align: center;
+    margin-bottom: 50px;
+    font-weight: bold;
+    position: relative;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background-color: var(--accent-color);
+}
+
+/* Футер */
+footer {
+    color: var(--text-color);
+    padding: 50px 0;
+    text-align: center;
+}
+
+footer .container {
+    max-width: 800px;
+}
+
+footer h3 {
+    color: var(--accent-color);
+    margin-bottom: 20px;
+}
+
+footer p {
+    color: var(--text-color2);
+    margin-bottom: 20px;
+}
+
+footer a {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: var(--accent-color-dark);
+}
+
+/* Социальные иконки в футере */
+.social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.social-links a {
+    color: var(--text-color2);
+    margin: 0 15px;
+    font-size: 1.5rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--accent-color);
+    transform: scale(1.2) rotate(360deg);
+}
+
+/* Адаптив */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .card {
+        margin-bottom: 15px;
+    }
+
+    .portfolio-item {
+        margin-bottom: 20px;
+    }
+
+    .social-links a {
+        margin: 0 10px;
+        font-size: 1.2rem;
+    }
+
+    .container {
+        padding: 10px;
+    }
+}
