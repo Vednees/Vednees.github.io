@@ -2,82 +2,148 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Залозный Иван Александрович</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vednees | Архитектор-Дизайнер</title>
     
-    <link rel="stylesheet" href="styles/bootstrap.css">
-    <link rel="stylesheet" href="styles/styles.css">
+    <!-- Подключаем стили -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
-    <header>
+    <!-- Навигация -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container">
-            <div class="row align-items-start">
-                <!-- Левая часть с текстом -->
-                <div class="col-md-6 text-container">
-                    <h1 class="logo_text">Залозный Иван Александрович</h1>
-                    <p class="sub_text" id="sub_text"></p>
+            <a class="navbar-brand" href="#">Vednees</a>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a href="#about" class="nav-link">О себе</a></li>
+                    <li class="nav-item"><a href="#skills" class="nav-link">Навыки</a></li>
+                    <!--<li class="nav-item"><a href="#portfolio" class="nav-link">Портфолио</a></li>-->
+                    <li class="nav-item"><a href="#contact" class="nav-link">Контакт</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Герой-секция -->
+    <section class="hero parallax-section">
+        <div class="container hero-content">
+            <h1>Vednees</h1>
+            <p>В будущем Архитектор-дизайнер</p>
+        </div>
+    </section>
+
+    <!-- О себе -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <h3>Обо мне</h3>
+                    <p class="lead">
+                        Страстный архитектор-дизайнер с мечтой создавать пространства, 
+                        которые вдохновляют и преображают окружающий мир.
+                    </p>
                 </div>
-                <div class="col-md-4">
-                    <img class="logo_img" src="img/alabuga.svg">
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="skills-container">
+                        <h3>Мои интересы</h3>
+                        <div class="d-flex flex-wrap gap-2">
+                            <span class="skill-card">#Архитектура</span>
+                            <span class="skill-card">#Дизайн</span>
+                            <span class="skill-card">#3D-Моделирование</span>
+                            <span class="skill-card">#Алабуга</span>
+                            <span class="skill-card">#3D</span>
+                            <span class="skill-card">#Проектирование</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </header>
-    <div class="block">
-        <div class="container">
-            <div class="row">
+    </section>
 
-                <div class="col-md-6">
-                    <p class="about_title">Наша миссия:</p>
-                    <div class="about_text_block">
-                        <p class="about_text">
-                            Мы растим промышленность для благополучия людей, создавая лучшую в мире инфраструктуру.
-                        </p>
+    <!-- Программы и навыки -->
+    <section class="skills-section parallax-section">
+        <div id="skills" class="container">
+            <h2 class="text-center mb-4">Мои инструменты</h2>
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="flip-left">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body text-center">
+                            <i class="bi bi-pencil display-4 text-primary"></i>
+                            <h4 class="card-title mt-3">Моделирование</h4>
+                            <p>3D Max, CorelDraw</p>
+                        </div>
                     </div>
                 </div>
-
-                <div class="col-md-6">
-                    <p class="about_title">Наши компетенции:</p>
-                    <div class="about_block">
-                        <img src="img/alabuga1.jpeg" class="img_about" alt="alabuga">
-                        <div class="about_content">
-                            <p>Это наша компания, это наша страна.</p>
-                        </div>   
-                    </div>
-
-                    <div class="about_block">
-                        <img src="img/alabuga4.jpeg" class="img_about" alt="alabuga">
-                        <div class="about_content">
-                            <p>Зона развития и достижений находится в паре шагов от зоны комфорта.</p>
+                <div class="col-md-4" data-aos="flip-left" data-aos-delay="200">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body text-center">
+                            <i class="bi bi-palette display-4 text-success"></i>
+                            <h4 class="card-title mt-3">Дизайн</h4>
+                            <p>Adobe Photoshop, Figma</p>
                         </div>
                     </div>
-
-                    <div class="about_block">
-                        <img src="img/alabuga3.jpeg" class="img_about" alt="alabuga">
-                        <div class="about_content">
-                            <p>Каждому по результату.</p>
-                        </div>   
-                    </div>
-
-                    <div class="about_block">
-                        <img src="img/alabuga2.jpeg" class="img_about" alt="alabuga">
-                        <div class="about_content">
-                            <p>Мы всегда выходим из зоны своего комфорта для обеспечения комфорта клиента.</p>
+                </div>
+                <div class="col-md-4" data-aos="flip-left" data-aos-delay="400">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body text-center">
+                            <i class="bi bi-building display-4 text-info"></i>
+                            <h4 class="card-title mt-3">Проектирование</h4>
+                            <p>AutoCAD, Revit, ArchiCAD</p>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <footer>
-        &copy; <span id="year"></span> <span> vednees. Alabuga Polytech.</span>
+    <!-- Портфолио
+    <section id="portfolio" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Портфолио</h2>
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="zoom-in">
+                    <div class="card">
+                        <img src="img/soon.png" class="card-img-top" alt="Проект1">
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="zoom-in">
+                    <div class="card">
+                        <img src="img/soon.png" class="card-img-top" alt="Проект2">
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="zoom-in">
+                    <div class="card">
+                        <img src="img/soon.png" class="card-img-top" alt="Проект3">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    -->
+    <!-- Футер -->
+    <footer id="contact" class="py-4">
+        <div class="container text-center">
+            <div class="social-links mb-3">
+                <a href="https://t.me/vednees" class="text-white me-3"><i class="bi bi-telegram"></i></a>
+            </div>
+            <p>© 2024 Vednees. Все права защищены.</p>
+            <p>Создано <i class="bi bi-heart-fill text-danger"></i> 
+                <a href="https://fazzyt.github.io" class="text-light">fazzyt</a>
+            </p>
+        </div>
     </footer>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="scripts/hello_world.js"></script>
-    <script src="scripts/year.js"></script>
+    <!-- Скрипты -->
+    <script src="js/bootstrap.js"></script>
+    <script src="js/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+    </script>
 </body>
 </html>
